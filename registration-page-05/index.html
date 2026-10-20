@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V05 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register05">
+    <header class="cl-register05__hero">
+      <img class="cl-register05__photo" src="images/venue.jpg" width="1200" height="520" alt="Audience seated in a dark conference hall facing a lit stage">
+      <div class="cl-register05__hero-text">
+        <p class="cl-register05__date">Thu 12 November 2026 &middot; Lisbon</p>
+        <h1 class="cl-register05__title">Frontline 2026</h1>
+        <p class="cl-register05__tag">A one-day conference for product designers. 14 talks, 3 workshops, one long lunch.</p>
+      </div>
+    </header>
+
+    <div class="cl-register05__layout">
+      <form class="cl-register05__form" id="cl-register05-form" data-form novalidate>
+        <section class="cl-register05__section" aria-labelledby="cl-register05-h-att">
+          <h2 class="cl-register05__h" id="cl-register05-h-att"><span aria-hidden="true">01</span> Attendee</h2>
+          <div class="cl-register05__grid">
+            <div class="cl-register05__field" data-field>
+              <label class="cl-register05__label" for="cl-register05-first">First name</label>
+              <input class="cl-register05__input" id="cl-register05-first" name="first" type="text" autocomplete="given-name" required data-msg="Enter your first name." aria-describedby="cl-register05-first-err">
+              <p class="cl-register05__error" id="cl-register05-first-err" data-error></p>
+            </div>
+            <div class="cl-register05__field" data-field>
+              <label class="cl-register05__label" for="cl-register05-last">Last name</label>
+              <input class="cl-register05__input" id="cl-register05-last" name="last" type="text" autocomplete="family-name" required data-msg="Enter your last name." aria-describedby="cl-register05-last-err">
+              <p class="cl-register05__error" id="cl-register05-last-err" data-error></p>
+            </div>
+            <div class="cl-register05__field" data-field>
+              <label class="cl-register05__label" for="cl-register05-email">Email</label>
+              <input class="cl-register05__input" id="cl-register05-email" name="email" type="email" autocomplete="email" required data-msg="Enter the email for your ticket." aria-describedby="cl-register05-email-err">
+              <p class="cl-register05__error" id="cl-register05-email-err" data-error></p>
+            </div>
+            <div class="cl-register05__field" data-field>
+              <label class="cl-register05__label" for="cl-register05-company">Company <span class="cl-register05__opt">optional</span></label>
+              <input class="cl-register05__input" id="cl-register05-company" name="company" type="text" autocomplete="organization" aria-describedby="cl-register05-company-err">
+              <p class="cl-register05__error" id="cl-register05-company-err" data-error></p>
+            </div>
+          </div>
+          <p class="cl-register05__hint">Your name and company go on your badge.</p>
+        </section>
+
+        <section class="cl-register05__section" aria-labelledby="cl-register05-h-ticket">
+          <h2 class="cl-register05__h" id="cl-register05-h-ticket"><span aria-hidden="true">02</span> Ticket</h2>
+          <fieldset class="cl-register05__field cl-register05__group" data-field data-group aria-describedby="cl-register05-ticket-err">
+            <legend class="cl-register05__vh">Ticket type</legend>
+            <div class="cl-register05__tickets">
+              <label class="cl-register05__ticket is-soldout">
+                <input type="radio" name="ticket" value="early" data-price="149" disabled>
+                <span class="cl-register05__t-name">Early bird</span>
+                <span class="cl-register05__t-price">&euro;149</span>
+                <span class="cl-register05__t-note">Sold out</span>
+              </label>
+              <label class="cl-register05__ticket">
+                <input type="radio" name="ticket" value="Standard" data-price="249" required data-msg="Choose a ticket type.">
+                <span class="cl-register05__t-name">Standard</span>
+                <span class="cl-register05__t-price">&euro;249</span>
+                <span class="cl-register05__t-note">All talks, lunch and the after-party</span>
+              </label>
+              <label class="cl-register05__ticket">
+                <input type="radio" name="ticket" value="Student" data-price="99">
+                <span class="cl-register05__t-name">Student</span>
+                <span class="cl-register05__t-price">&euro;99</span>
+                <span class="cl-register05__t-note">Bring a valid student ID on the day</span>
+              </label>
+            </div>
+            <p class="cl-register05__error" id="cl-register05-ticket-err" data-error></p>
+          </fieldset>
+
+          <div class="cl-register05__qty-row">
+            <span class="cl-register05__label" id="cl-register05-qty-label">Number of tickets</span>
+            <div class="cl-register05__qty" role="group" aria-labelledby="cl-register05-qty-label">
+              <button class="cl-register05__step" type="button" data-qty="-1" aria-label="One ticket fewer">&minus;</button>
+              <input class="cl-register05__qty-input" id="cl-register05-qty" name="qty" type="number" inputmode="numeric" min="1" max="5" value="1" aria-label="Number of tickets" aria-describedby="cl-register05-qty-hint">
+              <button class="cl-register05__step" type="button" data-qty="1" aria-label="One ticket more">+</button>
+            </div>
+            <p class="cl-register05__hint" id="cl-register05-qty-hint">Up to 5 per order. We&rsquo;ll ask for guest names by email.</p>
+          </div>
+
+          <fieldset class="cl-register05__group">
+            <legend class="cl-register05__label">Add-ons, per ticket</legend>
+            <label class="cl-register05__addon"><input type="checkbox" name="workshop" data-price="90"><span><strong>Afternoon workshop</strong> Designing with real data &middot; &euro;90</span></label>
+            <label class="cl-register05__addon"><input type="checkbox" name="recordings" data-price="29"><span><strong>Talk recordings</strong> 12 months of access &middot; &euro;29</span></label>
+          </fieldset>
+        </section>
+
+        <section class="cl-register05__section" aria-labelledby="cl-register05-h-diet">
+          <h2 class="cl-register05__h" id="cl-register05-h-diet"><span aria-hidden="true">03</span> Food and access</h2>
+          <fieldset class="cl-register05__group">
+            <legend class="cl-register05__label">Dietary needs <span class="cl-register05__opt">choose any</span></legend>
+            <div class="cl-register05__chips">
+              <label class="cl-register05__chip"><input type="checkbox" name="diet" value="Vegetarian"><span>Vegetarian</span></label>
+              <label class="cl-register05__chip"><input type="checkbox" name="diet" value="Vegan"><span>Vegan</span></label>
+              <label class="cl-register05__chip"><input type="checkbox" name="diet" value="Gluten-free"><span>Gluten-free</span></label>
+              <label class="cl-register05__chip"><input type="checkbox" name="diet" value="Halal"><span>Halal</span></label>
+              <label class="cl-register05__chip"><input type="checkbox" name="diet" value="Dairy-free"><span>Dairy-free</span></label>
+              <label class="cl-register05__chip"><input type="checkbox" name="diet" value="Nut allergy"><span>Nut allergy</span></label>
+            </div>
+          </fieldset>
+          <div class="cl-register05__field" data-field>
+            <label class="cl-register05__label" for="cl-register05-access">Accessibility requests <span class="cl-register05__opt">optional</span></label>
+            <textarea class="cl-register05__input cl-register05__area" id="cl-register05-access" name="access" rows="3" maxlength="500" placeholder="Step-free seating, a quiet room, live captions…" aria-describedby="cl-register05-access-err"></textarea>
+            <p class="cl-register05__error" id="cl-register05-access-err" data-error></p>
+          </div>
+          <div class="cl-register05__field" data-field>
+            <label class="cl-register05__check">
+              <input type="checkbox" name="code" required data-msg="Please agree to the code of conduct." aria-describedby="cl-register05-code-err">
+              <span>I&rsquo;ve read and will follow the <a class="cl-register05__link" href="#">code of conduct</a>.</span>
+            </label>
+            <p class="cl-register05__error" id="cl-register05-code-err" data-error></p>
+          </div>
+        </section>
+      </form>
+
+      <aside class="cl-register05__summary" aria-labelledby="cl-register05-h-sum">
+        <div class="cl-register05__sum-card" data-sum-card>
+          <h2 class="cl-register05__sum-title" id="cl-register05-h-sum">Your order</h2>
+          <ul class="cl-register05__lines" data-lines>
+            <li><span>Choose a ticket</span><span>&mdash;</span></li>
+          </ul>
+          <div class="cl-register05__promo">
+            <label class="cl-register05__label" for="cl-register05-promo">Promo code</label>
+            <div class="cl-register05__promo-row">
+              <input class="cl-register05__input" id="cl-register05-promo" type="text" autocomplete="off" autocapitalize="characters" aria-describedby="cl-register05-promo-msg">
+              <button class="cl-register05__apply" type="button" data-promo>Apply</button>
+            </div>
+            <p class="cl-register05__promo-msg" id="cl-register05-promo-msg" data-promo-msg></p>
+          </div>
+          <p class="cl-register05__total"><span>Total</span><strong data-total aria-live="polite">&euro;0</strong></p>
+          <p class="cl-register05__vat">Prices include 23% VAT. Free cancellation until 12 October.</p>
+          <button class="cl-register05__submit" type="submit" form="cl-register05-form" data-submit>Register</button>
+          <div class="cl-register05__live" role="status" aria-live="polite" data-live></div>
+          <p class="cl-register05__demo">Demo &mdash; nothing is sent or charged. Try code FRIEND10.</p>
+        </div>
+
+        <div class="cl-register05__done" data-success tabindex="-1" hidden>
+          <p class="cl-register05__ref" data-ref></p>
+          <h2 class="cl-register05__sum-title" data-done-title>You&rsquo;re registered</h2>
+          <p class="cl-register05__hint" data-done-text></p>
+          <p class="cl-register05__demo">Demo &mdash; nothing was sent or charged.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

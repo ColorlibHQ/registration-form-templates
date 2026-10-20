@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V06 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register06-demo">
+    <section class="cl-register06" aria-labelledby="cl-register06-title">
+      <header class="cl-register06__head">
+        <svg class="cl-register06__crest" viewBox="0 0 40 46" width="40" height="46" aria-hidden="true"><path d="M20 2 37 8v14c0 11-7.5 18.5-17 22C10.5 40.5 3 33 3 22V8Z" fill="#1e3a5f" stroke="#e0b44c" stroke-width="2.5"/><path d="M12 17h16M12 17v12h16V17M20 17v12M9 17l11-6 11 6" fill="none" stroke="#e0b44c" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div>
+          <p class="cl-register06__school">Ashdown Sixth Form College</p>
+          <h1 class="cl-register06__title" id="cl-register06-title">Enrolment form <span class="cl-register06__nowrap">2027&ndash;28</span></h1>
+        </div>
+      </header>
+
+      <div class="cl-register06__layout">
+        <aside class="cl-register06__side">
+          <img class="cl-register06__photo" src="images/campus.jpg" width="800" height="900" alt="Students working at desks in a bright classroom">
+          <h2 class="cl-register06__side-title">Key dates</h2>
+          <ol class="cl-register06__dates">
+            <li><strong>31 Jan 2027</strong> Priority deadline</li>
+            <li><strong>Mar 2027</strong> Course interviews</li>
+            <li><strong>19 Aug 2027</strong> Results day enrolment</li>
+            <li><strong>6 Sep 2027</strong> Term starts</li>
+          </ol>
+          <p class="cl-register06__side-note">Need help? Call admissions on <a class="cl-register06__link" href="#">01632 960 118</a>, weekdays 9&ndash;4.</p>
+        </aside>
+
+        <div class="cl-register06__main">
+          <form class="cl-register06__form" data-form novalidate>
+            <fieldset class="cl-register06__section">
+              <legend class="cl-register06__legend"><span aria-hidden="true">1</span>Student details</legend>
+              <div class="cl-register06__grid">
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-first">First name</label>
+                  <input class="cl-register06__input" id="cl-register06-first" name="first" type="text" autocomplete="given-name" required data-msg="Enter the student's first name." aria-describedby="cl-register06-first-err">
+                  <p class="cl-register06__error" id="cl-register06-first-err" data-error></p>
+                </div>
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-last">Last name</label>
+                  <input class="cl-register06__input" id="cl-register06-last" name="last" type="text" autocomplete="family-name" required data-msg="Enter the student's last name." aria-describedby="cl-register06-last-err">
+                  <p class="cl-register06__error" id="cl-register06-last-err" data-error></p>
+                </div>
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-dob">Date of birth</label>
+                  <input class="cl-register06__input" id="cl-register06-dob" name="dob" type="date" autocomplete="bday" required min="1990-01-01" max="2013-08-31" data-msg="Enter the student's date of birth." aria-describedby="cl-register06-dob-hint cl-register06-dob-err">
+                  <p class="cl-register06__hint" id="cl-register06-dob-hint" data-age>Students must be 14 or over on 1 September 2027.</p>
+                  <p class="cl-register06__error" id="cl-register06-dob-err" data-error></p>
+                </div>
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-email">Student email</label>
+                  <input class="cl-register06__input" id="cl-register06-email" name="email" type="email" autocomplete="email" required data-msg="Enter an email the student checks." aria-describedby="cl-register06-email-err">
+                  <p class="cl-register06__error" id="cl-register06-email-err" data-error></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="cl-register06__section">
+              <legend class="cl-register06__legend"><span aria-hidden="true">2</span>Course</legend>
+              <div class="cl-register06__field" data-field>
+                <label class="cl-register06__label" for="cl-register06-course">Main course</label>
+                <select class="cl-register06__input" id="cl-register06-course" name="course" required data-msg="Choose a course." aria-describedby="cl-register06-course-err">
+                  <option value="">Choose a course</option>
+                  <optgroup label="A levels (2 years)">
+                    <option>A level Biology, Chemistry and Maths</option>
+                    <option>A level English Literature, History and Politics</option>
+                    <option>A level Computer Science, Maths and Physics</option>
+                    <option>A level Art, Photography and Film Studies</option>
+                  </optgroup>
+                  <optgroup label="Vocational (2 years)">
+                    <option>Level 3 Diploma in Digital Media</option>
+                    <option>Level 3 Diploma in Health and Social Care</option>
+                    <option>Level 3 Diploma in Engineering</option>
+                  </optgroup>
+                  <optgroup label="Foundation (1 year)">
+                    <option>GCSE English and Maths resit programme</option>
+                  </optgroup>
+                </select>
+                <p class="cl-register06__error" id="cl-register06-course-err" data-error></p>
+              </div>
+              <fieldset class="cl-register06__field cl-register06__group" data-field data-group aria-describedby="cl-register06-start-err">
+                <legend class="cl-register06__label">Start date</legend>
+                <div class="cl-register06__radios">
+                  <label class="cl-register06__radio"><input type="radio" name="start" value="September 2027" required data-msg="Choose a start date." checked><span>September 2027</span></label>
+                  <label class="cl-register06__radio"><input type="radio" name="start" value="January 2028"><span>January 2028 <small>(Foundation only)</small></span></label>
+                </div>
+                <p class="cl-register06__error" id="cl-register06-start-err" data-error></p>
+              </fieldset>
+            </fieldset>
+
+            <fieldset class="cl-register06__section cl-register06__section--guardian" data-guardian>
+              <legend class="cl-register06__legend"><span aria-hidden="true">3</span>Parent or guardian</legend>
+              <p class="cl-register06__note" data-guardian-note>Required for students under 18 on 1 September 2027.</p>
+              <div class="cl-register06__grid" data-guardian-fields>
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-gname">Full name</label>
+                  <input class="cl-register06__input" id="cl-register06-gname" name="gname" type="text" autocomplete="section-guardian name" required data-guardian-input data-msg="Enter the parent or guardian's name." aria-describedby="cl-register06-gname-err">
+                  <p class="cl-register06__error" id="cl-register06-gname-err" data-error></p>
+                </div>
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-grel">Relationship</label>
+                  <select class="cl-register06__input" id="cl-register06-grel" name="grel" required data-guardian-input data-msg="Choose a relationship." aria-describedby="cl-register06-grel-err">
+                    <option value="">Choose</option>
+                    <option>Parent</option>
+                    <option>Step-parent</option>
+                    <option>Legal guardian</option>
+                    <option>Foster carer</option>
+                    <option>Other relative</option>
+                  </select>
+                  <p class="cl-register06__error" id="cl-register06-grel-err" data-error></p>
+                </div>
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-gphone">Mobile</label>
+                  <input class="cl-register06__input" id="cl-register06-gphone" name="gphone" type="tel" inputmode="tel" autocomplete="section-guardian tel" required pattern="[0-9 +\(\)\-]{10,20}" data-guardian-input data-msg="Enter a mobile number." data-pattern="Use digits and spaces, like 07700 900 481." aria-describedby="cl-register06-gphone-err">
+                  <p class="cl-register06__error" id="cl-register06-gphone-err" data-error></p>
+                </div>
+                <div class="cl-register06__field" data-field>
+                  <label class="cl-register06__label" for="cl-register06-gemail">Email</label>
+                  <input class="cl-register06__input" id="cl-register06-gemail" name="gemail" type="email" autocomplete="section-guardian email" required data-guardian-input data-msg="Enter an email for the parent or guardian." aria-describedby="cl-register06-gemail-err">
+                  <p class="cl-register06__error" id="cl-register06-gemail-err" data-error></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="cl-register06__field" data-field>
+              <label class="cl-register06__check">
+                <input type="checkbox" name="confirm" required data-msg="Please confirm the details are correct." aria-describedby="cl-register06-confirm-err">
+                <span>I confirm these details are correct and agree to the college contacting the student and guardian about this application.</span>
+              </label>
+              <p class="cl-register06__error" id="cl-register06-confirm-err" data-error></p>
+            </div>
+
+            <div class="cl-register06__actions">
+              <button class="cl-register06__submit" type="submit">Submit enrolment</button>
+              <p class="cl-register06__demo">Demo &mdash; nothing is sent.</p>
+            </div>
+            <div class="cl-register06__live" role="status" aria-live="polite" data-live></div>
+          </form>
+
+          <div class="cl-register06__done" data-success tabindex="-1" hidden>
+            <p class="cl-register06__ref" data-ref></p>
+            <h2 class="cl-register06__done-title" data-done-title>Application received</h2>
+            <p class="cl-register06__done-text" data-done-text></p>
+            <p class="cl-register06__demo">Demo &mdash; nothing was sent.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+/* colorlib-regform-22 - Colorlib
+ * Every style this snippet uses, and nothing else. No framework, no build step.
+ */
+
+/* Keeps a host page's framework base styles (Bootstrap's reboot) off this
+   snippet: every element starts from the browser default, then this sheet
+   styles it. On its own page it changes nothing. */
+:where(html) :is(html,body,div,span,p,a,h1,h2,h3,h4,h5,h6,label,input,select,option,optgroup,textarea,button,form,fieldset,legend,ul,ol,li,dl,dt,dd,figure,figcaption,section,article,header,footer,nav,main,aside,strong,b,em,i,small,sub,sup,blockquote,pre,code,picture,progress,output,summary,details,address,abbr,mark), :is(html, body) {
+  all: revert;
+}
+:where(html) input::-webkit-datetime-edit,
+:where(html) input::-webkit-datetime-edit-fields-wrapper,
+:where(html) input::-webkit-datetime-edit-text,
+:where(html) input::-webkit-datetime-edit-month-field,
+:where(html) input::-webkit-datetime-edit-day-field,
+:where(html) input::-webkit-datetime-edit-year-field {
+  all: revert;
+}
+:where(html) :is(img, svg) {
+  vertical-align: revert;
+}
+:where(html) :is(img, table, thead, tbody, tfoot, tr, th, td, caption, hr, iframe, video) {
+  box-sizing: revert;
+}
+:where(html) img {
+  border-style: revert;
+}
+:where(html) table {
+  border-collapse: revert;
+  caption-side: revert;
+}
+:where(html) caption {
+  padding-top: revert;
+  padding-bottom: revert;
+  color: revert;
+  text-align: revert;
+}
+:where(html) th {
+  text-align: revert;
+}
+:where(html) :is(thead, tbody, tfoot, tr, td, th) {
+  border-color: revert;
+  border-style: revert;
+  border-width: revert;
+}
+:where(html) hr {
+  margin: revert;
+  color: revert;
+  background-color: revert;
+  border: revert;
+  opacity: revert;
+  height: revert;
+  overflow: revert;
+}
+
+:is(*, html) {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.zmdi {
+  display: inline-block;
+  line-height: 1;
+  font-size: inherit;
+  font-style: normal;
+}
+
+.cl-icon {
+  height: 1em;
+  width: auto;
+  fill: currentColor;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "ElMessiri-SemiBold.ttf";
+
+  src: url('../fonts/ElMessiri-SemiBold.woff2') format('woff2');
+}
+
+body {
+  font-family: "Montserrat-Regular";
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: "Montserrat-Regular";
+  font-size: 15px;
+  color: #666;
+}
+
+textarea {
+  resize: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('../images/bg-registration-form-6.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.inner {
+  min-width: 861px;
+  transform: translateX(47px);
+  margin: auto;
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.image-holder img {
+  border-radius: 15px;
+  transform: translateX(-94px);
+}
+
+form {
+  padding-top: 42px;
+  min-width: 63.88%;
+  transform: translateX(-34px);
+}
+
+h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 21px;
+  color: #333;
+  text-transform: uppercase;
+  font-family: "ElMessiri-SemiBold.ttf";
+}
+
+.cl-form-control {
+  height: 47px;
+  display: block;
+  border: 1px solid #e6e6e6;
+  background: none;
+  border-radius: 5px;
+  padding: 0 19px;
+}
+
+.cl-form-control:focus {
+  border: 1px solid #f4d5cc;
+}
+
+.cl-form-control::-webkit-input-placeholder {
+  color: #999;
+}
+
+.cl-form-control::-moz-placeholder {
+  color: #999;
+}
+
+.cl-form-control:-ms-input-placeholder {
+  color: #999;
+}
+
+.cl-form-control:-moz-placeholder {
+  color: #999;
+}
+
+select.cl-form-control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #999;
+}
+
+select.cl-form-control option[value=""][disabled] {
+  display: none;
+}
+
+textarea.cl-form-control {
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.cl-form-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.cl-form-row .cl-form-control {
+  width: 50%;
+}
+
+.cl-form-row .cl-form-control:first-child {
+  margin-right: 20px;
+}
+
+.cl-form-row .form-holder {
+  width: 50%;
+}
+
+.cl-form-row .form-holder .cl-form-control {
+  width: 100%;
+}
+
+.form-holder {
+  position: relative;
+}
+
+.form-holder i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+button {
+  height: 47px;
+  width: 174px;
+  display: flex;
+  border: none;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: "Montserrat-Medium";
+  text-transform: uppercase;
+  background: #84cde1;
+  border-radius: 5px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+
+button i {
+  margin-left: 8px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+button:hover {
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-color: #17c8f8;
+  color: white;
+}
+
+button:hover i {
+  -webkit-animation-name: hvr-icon-buzz-out;
+  animation-name: hvr-icon-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+
+@-webkit-keyframes hvr-icon-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes hvr-icon-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .inner {
+    min-width: auto;
+    max-width: 660px;
+  }
+
+  form {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    display: block;
+    transform: translateX(0);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .image-holder img {
+    transform: translateX(0);
+    border-radius: 0;
+  }
+
+  form {
+    transform: translateX(0);
+    padding-top: 40px;
+  }
+
+  .cl-form-row {
+    display: block;
+  }
+
+  .cl-form-row .cl-form-control,
+  .cl-form-row .form-holder {
+    width: 100%;
+  }
+
+  .cl-form-control {
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    background: none;
+  }
+}

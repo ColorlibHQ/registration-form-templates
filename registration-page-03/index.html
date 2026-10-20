@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V03 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register03-demo">
+    <section class="cl-register03" aria-labelledby="cl-register03-title">
+      <p class="cl-register03__brand"><span aria-hidden="true">&para;</span> Folio</p>
+
+      <form class="cl-register03__form" data-form novalidate>
+        <h1 class="cl-register03__title" id="cl-register03-title">Start writing.</h1>
+        <p class="cl-register03__sub">A quiet place for drafts, notes and the long thing you keep meaning to finish. Free, forever, for one notebook.</p>
+
+        <div class="cl-register03__field" data-field>
+          <label class="cl-register03__label" for="cl-register03-name">What should we call you?</label>
+          <input class="cl-register03__input" id="cl-register03-name" name="name" type="text" autocomplete="nickname" required data-msg="Add a name, even just a first name." aria-describedby="cl-register03-name-err">
+          <p class="cl-register03__error" id="cl-register03-name-err" data-error></p>
+        </div>
+
+        <div class="cl-register03__field" data-field data-email-field>
+          <label class="cl-register03__label" for="cl-register03-email">Email</label>
+          <div class="cl-register03__email">
+            <input class="cl-register03__input" id="cl-register03-email" name="email" type="email" autocomplete="email" required data-msg="We need an email to send your sign-in link." aria-describedby="cl-register03-avail cl-register03-email-err">
+            <span class="cl-register03__badge" aria-hidden="true" data-badge></span>
+          </div>
+          <p class="cl-register03__avail" id="cl-register03-avail" role="status" aria-live="polite" data-avail></p>
+          <p class="cl-register03__error" id="cl-register03-email-err" data-error></p>
+        </div>
+
+        <div class="cl-register03__field" data-field>
+          <label class="cl-register03__label" for="cl-register03-pw">Password</label>
+          <div class="cl-register03__pw">
+            <input class="cl-register03__input" id="cl-register03-pw" name="password" type="password" autocomplete="new-password" required minlength="8" data-msg="Choose a password." aria-describedby="cl-register03-pw-hint cl-register03-pw-err">
+            <button class="cl-register03__show" type="button" aria-pressed="false" aria-controls="cl-register03-pw" data-pw-toggle>Show<span class="cl-register03__vh"> password</span></button>
+          </div>
+          <p class="cl-register03__hint" id="cl-register03-pw-hint">8 characters or more.</p>
+          <p class="cl-register03__error" id="cl-register03-pw-err" data-error></p>
+        </div>
+
+        <div class="cl-register03__field" data-field>
+          <label class="cl-register03__check">
+            <input type="checkbox" name="terms" required data-msg="Please agree to the terms to continue." aria-describedby="cl-register03-terms-err">
+            <span>I agree to the <a class="cl-register03__link" href="#">terms</a> and have read the <a class="cl-register03__link" href="#">privacy notice</a>.</span>
+          </label>
+          <p class="cl-register03__error" id="cl-register03-terms-err" data-error></p>
+        </div>
+        <label class="cl-register03__check cl-register03__check--soft">
+          <input type="checkbox" name="letters">
+          <span>Send me the monthly letter on writing habits. No more than one a month.</span>
+        </label>
+
+        <button class="cl-register03__submit" type="submit">Create my notebook</button>
+        <div class="cl-register03__vh" role="status" aria-live="polite" data-live></div>
+        <p class="cl-register03__foot">Have a notebook already? <a class="cl-register03__link" href="#">Sign in</a></p>
+      </form>
+
+      <div class="cl-register03__done" data-success tabindex="-1" hidden>
+        <h2 class="cl-register03__title" data-done-title>Your notebook is ready.</h2>
+        <p class="cl-register03__sub" data-done-text></p>
+        <p class="cl-register03__quote">Tip: set a small daily goal. Two hundred words still counts.</p>
+      </div>
+
+      <p class="cl-register03__demo">Demo &mdash; nothing is sent. Try ana@example.com to see a taken address.</p>
+    </section>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

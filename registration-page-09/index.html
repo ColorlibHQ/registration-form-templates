@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V09 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register09-demo">
+    <section class="cl-register09" aria-labelledby="cl-register09-title">
+      <header class="cl-register09__top">
+        <button class="cl-register09__back" type="button" data-back aria-label="Back to phone number" hidden>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <span class="cl-register09__logo">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4Z" fill="#111" /><path d="M3 7l9 4 9-4M12 11v10" stroke="#ffd60a" stroke-width="1.8" fill="none"/></svg>
+          Parcelo
+        </span>
+        <span class="cl-register09__stepnum" data-stepnum>1 / 2</span>
+      </header>
+      <div class="cl-register09__bar" role="progressbar" aria-label="Sign-up progress" aria-valuemin="1" aria-valuemax="2" aria-valuenow="1" aria-valuetext="Step 1 of 2: your number" data-progress><span data-bar></span></div>
+
+      <form class="cl-register09__step" data-step="phone" novalidate>
+        <h1 class="cl-register09__title" id="cl-register09-title" tabindex="-1" data-heading>Send anything across town, today.</h1>
+        <p class="cl-register09__sub">Sign up with your mobile number. We&rsquo;ll text you a code &mdash; no password needed.</p>
+
+        <div class="cl-register09__field" data-field>
+          <label class="cl-register09__label" for="cl-register09-name">First name</label>
+          <input class="cl-register09__input" id="cl-register09-name" name="name" type="text" autocomplete="given-name" required data-msg="Tell us your first name, so couriers know who to ask for." aria-describedby="cl-register09-name-err">
+          <p class="cl-register09__error" id="cl-register09-name-err" data-error></p>
+        </div>
+
+        <div class="cl-register09__field" data-field data-phone-field>
+          <span class="cl-register09__label" id="cl-register09-phone-label">Mobile number</span>
+          <div class="cl-register09__phone" role="group" aria-labelledby="cl-register09-phone-label">
+            <label class="cl-register09__vh" for="cl-register09-cc">Country code</label>
+            <select class="cl-register09__cc" id="cl-register09-cc" name="cc" autocomplete="tel-country-code" data-cc>
+              <option value="44" data-len="10" data-example="7700 900123" selected>GB +44</option>
+              <option value="353" data-len="9" data-example="85 123 4567">IE +353</option>
+              <option value="1" data-len="10" data-example="415 555 0132">US +1</option>
+              <option value="49" data-len="10,11" data-example="1512 3456789">DE +49</option>
+              <option value="33" data-len="9" data-example="6 12 34 56 78">FR +33</option>
+              <option value="31" data-len="9" data-example="6 12345678">NL +31</option>
+              <option value="61" data-len="9" data-example="412 345 678">AU +61</option>
+            </select>
+            <label class="cl-register09__vh" for="cl-register09-phone">Mobile number without country code</label>
+            <input class="cl-register09__input cl-register09__tel" id="cl-register09-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="7700 900123" data-msg="Enter your mobile number." aria-describedby="cl-register09-phone-err">
+          </div>
+          <p class="cl-register09__error" id="cl-register09-phone-err" data-error></p>
+        </div>
+
+        <label class="cl-register09__check">
+          <input type="checkbox" name="deals">
+          <span>Text me the occasional offer. Never more than twice a month.</span>
+        </label>
+
+        <div class="cl-register09__cta">
+          <button class="cl-register09__submit" type="submit">Send me a code</button>
+          <p class="cl-register09__legal">By continuing you agree to our <a class="cl-register09__link" href="#">Terms</a> and <a class="cl-register09__link" href="#">Privacy Policy</a>. Standard SMS rates may apply.</p>
+        </div>
+      </form>
+
+      <form class="cl-register09__step" data-step="code" novalidate hidden>
+        <h2 class="cl-register09__title" tabindex="-1" data-heading>Enter your code</h2>
+        <p class="cl-register09__sub">We sent a 6-digit code to <strong data-number></strong>.</p>
+
+        <div class="cl-register09__field" data-field>
+          <label class="cl-register09__label" for="cl-register09-code">6-digit code</label>
+          <input class="cl-register09__code" id="cl-register09-code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" required maxlength="6" pattern="[0-9]{6}" data-msg="Enter the 6-digit code from the text." aria-describedby="cl-register09-code-err">
+          <p class="cl-register09__error" id="cl-register09-code-err" data-error></p>
+        </div>
+
+        <div class="cl-register09__resend">
+          <button class="cl-register09__text-btn" type="button" data-resend disabled>Resend code <span data-count>in 0:30</span></button>
+          <button class="cl-register09__text-btn" type="button" data-change>Change number</button>
+        </div>
+
+        <div class="cl-register09__cta">
+          <button class="cl-register09__submit" type="submit" data-verify>Verify and create account</button>
+        </div>
+      </form>
+
+      <div class="cl-register09__done" data-success tabindex="-1" hidden>
+        <span class="cl-register09__done-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+        <h2 class="cl-register09__title" data-done-title></h2>
+        <p class="cl-register09__sub">Your first delivery within zone 1 is on us. Tap Send a parcel to start.</p>
+      </div>
+
+      <div class="cl-register09__vh" role="status" aria-live="polite" data-live></div>
+      <p class="cl-register09__demo">Demo &mdash; nothing is sent. Any 6 digits work except 000000.</p>
+    </section>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

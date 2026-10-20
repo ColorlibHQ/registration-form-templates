@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V02 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register02-demo">
+    <section class="cl-register02" aria-labelledby="cl-register02-title">
+      <aside class="cl-register02__rail">
+        <p class="cl-register02__brand">
+          <svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#fff"/><path d="M8 18l4-8 3 5 2-3 3 6" fill="none" stroke="#5b21b6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Kitewire
+        </p>
+        <h1 class="cl-register02__title" id="cl-register02-title">Create your workspace</h1>
+        <p class="cl-register02__lead">Four short steps. You can change everything later.</p>
+        <ol class="cl-register02__steps" aria-label="Sign-up progress">
+          <li class="cl-register02__step" aria-current="step" data-step-item><span class="cl-register02__num" aria-hidden="true">1</span><span><strong>Account</strong><small>Email and password</small></span></li>
+          <li class="cl-register02__step" data-step-item><span class="cl-register02__num" aria-hidden="true">2</span><span><strong>Profile</strong><small>About you and your team</small></span></li>
+          <li class="cl-register02__step" data-step-item><span class="cl-register02__num" aria-hidden="true">3</span><span><strong>Plan</strong><small>Free, Pro or Business</small></span></li>
+          <li class="cl-register02__step" data-step-item><span class="cl-register02__num" aria-hidden="true">4</span><span><strong>Review</strong><small>Check and create</small></span></li>
+        </ol>
+        <p class="cl-register02__help">Questions? <a class="cl-register02__rail-link" href="#">Talk to sales</a></p>
+      </aside>
+
+      <div class="cl-register02__body">
+        <div class="cl-register02__progress" role="progressbar" aria-label="Sign-up progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" aria-valuetext="Step 1 of 4" data-progress><span data-bar></span></div>
+
+        <form class="cl-register02__form" data-form novalidate>
+          <fieldset class="cl-register02__panel" data-panel>
+            <legend class="cl-register02__legend" tabindex="-1" data-heading>Step 1 of 4 &middot; Account</legend>
+            <div class="cl-register02__field" data-field>
+              <label class="cl-register02__label" for="cl-register02-email">Work email</label>
+              <input class="cl-register02__input" id="cl-register02-email" name="email" type="email" autocomplete="email" required data-msg="Enter your work email." aria-describedby="cl-register02-email-err">
+              <p class="cl-register02__error" id="cl-register02-email-err" data-error></p>
+            </div>
+            <div class="cl-register02__field" data-field>
+              <label class="cl-register02__label" for="cl-register02-pw">Password</label>
+              <div class="cl-register02__pw">
+                <input class="cl-register02__input" id="cl-register02-pw" name="password" type="password" autocomplete="new-password" required minlength="10" data-msg="Create a password." aria-describedby="cl-register02-pw-hint cl-register02-pw-err">
+                <button class="cl-register02__eye" type="button" aria-label="Show password" aria-pressed="false" aria-controls="cl-register02-pw" data-pw-toggle>
+                  <svg class="cl-register02__eye-on" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg class="cl-register02__eye-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 5.1A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6C3.9 8.3 2 12 2 12s3.6 7 10 7a9.8 9.8 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+                </button>
+              </div>
+              <p class="cl-register02__hint" id="cl-register02-pw-hint">10 characters or more. A short phrase works well.</p>
+              <p class="cl-register02__error" id="cl-register02-pw-err" data-error></p>
+            </div>
+            <p class="cl-register02__callout">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5M16 4.5a3.5 3.5 0 0 1 0 7M18.5 13.8c1.8.9 3 2.8 3 5"/></svg>
+              <span><strong>Joining a team that already uses Kitewire?</strong> Ask your admin for an invite link instead, so you land in the right workspace.</span>
+            </p>
+          </fieldset>
+
+          <fieldset class="cl-register02__panel" data-panel hidden>
+            <legend class="cl-register02__legend" tabindex="-1" data-heading>Step 2 of 4 &middot; Profile</legend>
+            <div class="cl-register02__grid">
+              <div class="cl-register02__field" data-field>
+                <label class="cl-register02__label" for="cl-register02-first">First name</label>
+                <input class="cl-register02__input" id="cl-register02-first" name="first" type="text" autocomplete="given-name" required data-msg="Enter your first name." aria-describedby="cl-register02-first-err">
+                <p class="cl-register02__error" id="cl-register02-first-err" data-error></p>
+              </div>
+              <div class="cl-register02__field" data-field>
+                <label class="cl-register02__label" for="cl-register02-last">Last name</label>
+                <input class="cl-register02__input" id="cl-register02-last" name="last" type="text" autocomplete="family-name" required data-msg="Enter your last name." aria-describedby="cl-register02-last-err">
+                <p class="cl-register02__error" id="cl-register02-last-err" data-error></p>
+              </div>
+            </div>
+            <div class="cl-register02__field" data-field>
+              <label class="cl-register02__label" for="cl-register02-role">Your role</label>
+              <select class="cl-register02__input" id="cl-register02-role" name="role" required data-msg="Choose the role closest to yours." aria-describedby="cl-register02-role-err">
+                <option value="">Choose a role</option>
+                <option>Designer</option>
+                <option>Engineer</option>
+                <option>Product manager</option>
+                <option>Founder</option>
+                <option>Marketing</option>
+                <option>Something else</option>
+              </select>
+              <p class="cl-register02__error" id="cl-register02-role-err" data-error></p>
+            </div>
+            <fieldset class="cl-register02__field cl-register02__group" data-field data-group aria-describedby="cl-register02-size-err">
+              <legend class="cl-register02__label">Team size</legend>
+              <div class="cl-register02__pills">
+                <label class="cl-register02__pill"><input type="radio" name="size" value="Just me" required data-msg="Choose a team size."><span>Just me</span></label>
+                <label class="cl-register02__pill"><input type="radio" name="size" value="2–10"><span>2&ndash;10</span></label>
+                <label class="cl-register02__pill"><input type="radio" name="size" value="11–50"><span>11&ndash;50</span></label>
+                <label class="cl-register02__pill"><input type="radio" name="size" value="51+"><span>51+</span></label>
+              </div>
+              <p class="cl-register02__error" id="cl-register02-size-err" data-error></p>
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="cl-register02__panel" data-panel hidden>
+            <legend class="cl-register02__legend" tabindex="-1" data-heading>Step 3 of 4 &middot; Plan</legend>
+            <fieldset class="cl-register02__field cl-register02__group" data-field data-group aria-describedby="cl-register02-plan-err">
+              <legend class="cl-register02__vh">Choose a plan</legend>
+              <div class="cl-register02__plans">
+                <label class="cl-register02__plan">
+                  <input type="radio" name="plan" value="Free" required data-msg="Pick a plan to continue." data-price="£0">
+                  <span class="cl-register02__plan-name">Free</span>
+                  <span class="cl-register02__plan-price">&pound;0</span>
+                  <span class="cl-register02__plan-note">3 boards, 2 members</span>
+                </label>
+                <label class="cl-register02__plan">
+                  <input type="radio" name="plan" value="Pro" data-price="£12 per member / month">
+                  <span class="cl-register02__plan-tag">Popular</span>
+                  <span class="cl-register02__plan-name">Pro</span>
+                  <span class="cl-register02__plan-price">&pound;12 <small>/member/mo</small></span>
+                  <span class="cl-register02__plan-note">Unlimited boards, guests, history</span>
+                </label>
+                <label class="cl-register02__plan">
+                  <input type="radio" name="plan" value="Business" data-price="£29 per member / month">
+                  <span class="cl-register02__plan-name">Business</span>
+                  <span class="cl-register02__plan-price">&pound;29 <small>/member/mo</small></span>
+                  <span class="cl-register02__plan-note">SSO, audit log, priority support</span>
+                </label>
+              </div>
+              <p class="cl-register02__error" id="cl-register02-plan-err" data-error></p>
+            </fieldset>
+            <p class="cl-register02__hint">Paid plans start with a 14-day trial. No card needed today.</p>
+          </fieldset>
+
+          <fieldset class="cl-register02__panel" data-panel hidden>
+            <legend class="cl-register02__legend" tabindex="-1" data-heading>Step 4 of 4 &middot; Review</legend>
+            <div class="cl-register02__review" data-review></div>
+            <div class="cl-register02__field" data-field>
+              <label class="cl-register02__check">
+                <input type="checkbox" name="terms" required data-msg="Please accept the terms to create your account." aria-describedby="cl-register02-terms-err">
+                <span>I agree to the <a class="cl-register02__link" href="#">Terms of Service</a> and <a class="cl-register02__link" href="#">Privacy Policy</a>.</span>
+              </label>
+              <p class="cl-register02__error" id="cl-register02-terms-err" data-error></p>
+            </div>
+          </fieldset>
+
+          <div class="cl-register02__nav">
+            <button class="cl-register02__back" type="button" data-back hidden>Back</button>
+            <button class="cl-register02__next" type="submit" data-next>Continue</button>
+          </div>
+          <div class="cl-register02__vh" role="status" aria-live="polite" data-live></div>
+        </form>
+
+        <div class="cl-register02__done" data-success tabindex="-1" hidden>
+          <span class="cl-register02__done-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+          <h2 class="cl-register02__done-title" data-done-title>Workspace created</h2>
+          <p class="cl-register02__hint" data-done-text></p>
+        </div>
+        <p class="cl-register02__demo">Demo &mdash; nothing is sent.</p>
+      </div>
+    </section>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

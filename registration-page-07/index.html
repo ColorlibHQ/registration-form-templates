@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V07 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register07-demo">
+    <section class="cl-register07" aria-labelledby="cl-register07-title">
+      <div class="cl-register07__main">
+        <p class="cl-register07__brand">
+          <svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#1d4ed8"/><circle cx="10" cy="12" r="3.2" fill="#a7f3d0"/><circle cx="18" cy="12" r="3.2" fill="#fff"/><path d="M5.5 21c.8-2.8 2.4-4.2 4.5-4.2s3.7 1.4 4.5 4.2M13.5 21c.8-2.8 2.4-4.2 4.5-4.2s3.7 1.4 4.5 4.2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          Huddle
+        </p>
+        <h1 class="cl-register07__title" id="cl-register07-title">Set up your team&rsquo;s workspace</h1>
+        <p class="cl-register07__sub">Async stand-ups that take two minutes, not twenty. Free for teams of up to 10.</p>
+
+        <form class="cl-register07__form" data-form novalidate>
+          <div class="cl-register07__field" data-field>
+            <label class="cl-register07__label" for="cl-register07-ws">Workspace name</label>
+            <input class="cl-register07__input" id="cl-register07-ws" name="workspace" type="text" autocomplete="organization" required minlength="2" maxlength="40" data-msg="Name your workspace, usually your team or company." aria-describedby="cl-register07-ws-url cl-register07-ws-err">
+            <p class="cl-register07__hint" id="cl-register07-ws-url">Your address: <strong data-url>huddle.so/your-team</strong></p>
+            <p class="cl-register07__error" id="cl-register07-ws-err" data-error></p>
+          </div>
+
+          <div class="cl-register07__grid">
+            <div class="cl-register07__field" data-field>
+              <label class="cl-register07__label" for="cl-register07-name">Your name</label>
+              <input class="cl-register07__input" id="cl-register07-name" name="name" type="text" autocomplete="name" required data-msg="Enter your name." aria-describedby="cl-register07-name-err">
+              <p class="cl-register07__error" id="cl-register07-name-err" data-error></p>
+            </div>
+            <div class="cl-register07__field" data-field>
+              <label class="cl-register07__label" for="cl-register07-email">Work email</label>
+              <input class="cl-register07__input" id="cl-register07-email" name="email" type="email" autocomplete="email" required data-msg="Enter your work email." aria-describedby="cl-register07-email-err">
+              <p class="cl-register07__error" id="cl-register07-email-err" data-error></p>
+            </div>
+          </div>
+
+          <div class="cl-register07__field" data-field>
+            <label class="cl-register07__label" for="cl-register07-pw">Password</label>
+            <div class="cl-register07__pw">
+              <input class="cl-register07__input" id="cl-register07-pw" name="password" type="password" autocomplete="new-password" required minlength="10" data-msg="Create a password." aria-describedby="cl-register07-pw-err">
+              <button class="cl-register07__eye" type="button" aria-label="Show password" aria-pressed="false" aria-controls="cl-register07-pw" data-pw-toggle>
+                <svg class="cl-register07__eye-on" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="cl-register07__eye-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 5.1A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6C3.9 8.3 2 12 2 12s3.6 7 10 7a9.8 9.8 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+              </button>
+            </div>
+            <p class="cl-register07__error" id="cl-register07-pw-err" data-error></p>
+          </div>
+
+          <fieldset class="cl-register07__invites">
+            <legend class="cl-register07__legend">Invite teammates <span class="cl-register07__opt">optional</span></legend>
+            <p class="cl-register07__hint">They&rsquo;ll get an email with a link to join. You can invite more later.</p>
+            <ol class="cl-register07__rows" data-rows></ol>
+            <div class="cl-register07__row-actions">
+              <button class="cl-register07__add" type="button" data-add>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                Add teammate
+              </button>
+              <p class="cl-register07__limit" data-limit hidden>That&rsquo;s the 8-invite limit for now.</p>
+            </div>
+          </fieldset>
+
+          <button class="cl-register07__submit" type="submit">Create workspace</button>
+          <div class="cl-register07__live" role="status" aria-live="polite" data-live></div>
+          <p class="cl-register07__demo">Demo &mdash; nothing is sent.</p>
+        </form>
+
+        <template data-row-template>
+          <li class="cl-register07__row" data-row>
+            <div class="cl-register07__row-field">
+              <label class="cl-register07__vh" data-email-label>Teammate email</label>
+              <input class="cl-register07__input" type="email" autocomplete="off" placeholder="name@company.com" data-invite-email>
+            </div>
+            <div class="cl-register07__row-role">
+              <label class="cl-register07__vh" data-role-label>Role</label>
+              <select class="cl-register07__input cl-register07__select" data-invite-role>
+                <option>Member</option>
+                <option>Admin</option>
+                <option>Guest</option>
+              </select>
+            </div>
+            <button class="cl-register07__remove" type="button" data-remove>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+            <p class="cl-register07__error cl-register07__row-error" data-error></p>
+          </li>
+        </template>
+
+        <div class="cl-register07__done" data-success tabindex="-1" hidden>
+          <span class="cl-register07__done-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+          <h2 class="cl-register07__title" data-done-title></h2>
+          <p class="cl-register07__sub" data-done-text></p>
+        </div>
+      </div>
+
+      <aside class="cl-register07__preview" aria-label="Workspace preview">
+        <p class="cl-register07__preview-label">Preview</p>
+        <div class="cl-register07__ws-card">
+          <div class="cl-register07__ws-top">
+            <span class="cl-register07__ws-logo" data-ws-initial aria-hidden="true">?</span>
+            <div>
+              <p class="cl-register07__ws-name" data-ws-name>Your team</p>
+              <p class="cl-register07__ws-url" data-ws-url>huddle.so/your-team</p>
+            </div>
+          </div>
+          <div class="cl-register07__ws-members">
+            <ul class="cl-register07__avatars" data-avatars aria-label="Members"></ul>
+            <p class="cl-register07__ws-count" data-count>Just you so far</p>
+          </div>
+          <div class="cl-register07__ws-feed" aria-hidden="true">
+            <div class="cl-register07__feed-row"><span></span><div><i></i><i></i></div></div>
+            <div class="cl-register07__feed-row"><span></span><div><i></i><i></i></div></div>
+            <div class="cl-register07__feed-row"><span></span><div><i></i><i></i></div></div>
+          </div>
+        </div>
+        <p class="cl-register07__preview-note">Every morning at 9:30 your team gets three questions. Answers arrive as one tidy digest.</p>
+      </aside>
+    </section>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

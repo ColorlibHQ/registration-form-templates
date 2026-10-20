@@ -1,0 +1,490 @@
+/* colorlib-regform-15 - Colorlib
+ * Every style this snippet uses, and nothing else. No framework, no build step.
+ */
+
+/* Keeps a host page's framework base styles (Bootstrap's reboot) off this
+   snippet: every element starts from the browser default, then this sheet
+   styles it. On its own page it changes nothing. */
+:where(html) :is(html,body,div,span,p,a,h1,h2,h3,h4,h5,h6,label,input,select,option,optgroup,textarea,button,form,fieldset,legend,ul,ol,li,dl,dt,dd,figure,figcaption,section,article,header,footer,nav,main,aside,strong,b,em,i,small,sub,sup,blockquote,pre,code,picture,progress,output,summary,details,address,abbr,mark), :is(html, body) {
+  all: revert;
+}
+:where(html) input::-webkit-datetime-edit,
+:where(html) input::-webkit-datetime-edit-fields-wrapper,
+:where(html) input::-webkit-datetime-edit-text,
+:where(html) input::-webkit-datetime-edit-month-field,
+:where(html) input::-webkit-datetime-edit-day-field,
+:where(html) input::-webkit-datetime-edit-year-field {
+  all: revert;
+}
+:where(html) :is(img, svg) {
+  vertical-align: revert;
+}
+:where(html) :is(img, table, thead, tbody, tfoot, tr, th, td, caption, hr, iframe, video) {
+  box-sizing: revert;
+}
+:where(html) img {
+  border-style: revert;
+}
+:where(html) table {
+  border-collapse: revert;
+  caption-side: revert;
+}
+:where(html) caption {
+  padding-top: revert;
+  padding-bottom: revert;
+  color: revert;
+  text-align: revert;
+}
+:where(html) th {
+  text-align: revert;
+}
+:where(html) :is(thead, tbody, tfoot, tr, td, th) {
+  border-color: revert;
+  border-style: revert;
+  border-width: revert;
+}
+:where(html) hr {
+  margin: revert;
+  color: revert;
+  background-color: revert;
+  border: revert;
+  opacity: revert;
+  height: revert;
+  overflow: revert;
+}
+
+.zmdi {
+  display: inline-block;
+  line-height: 1;
+  font-size: inherit;
+  font-style: normal;
+}
+
+.cl-icon {
+  height: 1em;
+  width: auto;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.signup-content,
+.cl-form-row,
+.form-radio,
+.select-icon,
+.select-icon i {
+  display: flex;
+  display: -webkit-flex;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+
+  src: url('../fonts/poppins-v5-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+
+  src: url('../fonts/poppins-v5-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+
+  src: url('../fonts/poppins-v5-latin-700.woff2') format('woff2');
+}
+
+input,
+select {
+  outline: none;
+  appearance: unset !important;
+  -moz-appearance: unset !important;
+  -webkit-appearance: unset !important;
+  -o-appearance: unset !important;
+  -ms-appearance: unset !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  margin: 0;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+}
+
+input[type=radio] {
+  appearance: radio !important;
+  -moz-appearance: radio !important;
+  -webkit-appearance: radio !important;
+  -o-appearance: radio !important;
+  -ms-appearance: radio !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 30px transparent inset;
+  -moz-box-shadow: 0 0 0 30px transparent inset;
+  -webkit-box-shadow: 0 0 0 30px transparent inset;
+  -o-box-shadow: 0 0 0 30px transparent inset;
+  -ms-box-shadow: 0 0 0 30px transparent inset;
+}
+
+h2 {
+  line-height: 1.66;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: #222;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+body {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #222;
+  font-weight: 400;
+  background: #282828;
+  padding: 90px 0;
+}
+
+.cl-container {
+  width: 1400px;
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.signup-img,
+.signup-form {
+  width: 50%;
+}
+
+.signup-img {
+  margin-bottom: -7px;
+}
+
+.register-form {
+  padding: 50px 100px 50px 70px;
+}
+
+.cl-form-row {
+  margin: 0 -15px;
+}
+
+.cl-form-row .cl-form-group {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.cl-form-group {
+  margin-bottom: 23px;
+  position: relative;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  padding: 11px 20px;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 13px;
+}
+
+input:focus,
+select:focus {
+  border: 1px solid #ff6801;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Montserrat';
+  margin-bottom: 2px;
+  display: block;
+}
+
+.form-radio {
+  margin-bottom: 18px;
+}
+
+.form-radio input {
+  width: auto;
+  display: inline-block;
+}
+
+.radio-label {
+  padding-right: 72px;
+}
+
+.form-radio-item {
+  position: relative;
+  margin-right: 45px;
+}
+
+.form-radio-item label {
+  font-weight: 500;
+  font-size: 13px;
+  padding-left: 25px;
+  position: relative;
+  z-index: 9;
+  display: block;
+  cursor: pointer;
+}
+
+.cl-check {
+  display: inline-block;
+  position: absolute;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  top: 4px;
+  left: 0px;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+
+.cl-check:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+
+input[type=radio]:checked ~ .cl-check {
+  border: 1px solid #ff6801;
+}
+
+input[type=radio]:checked ~ .cl-check::before {
+  background: #ff6801;
+}
+
+.cl-form-select {
+  position: relative;
+}
+
+select {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  position: relative;
+  background: 0 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.select-icon {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+}
+
+.select-icon i {
+  justify-content: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  width: 40px;
+  height: 20px;
+  font-size: 18px;
+  color: #999;
+}
+
+.form-submit {
+  text-align: right;
+  padding-top: 27px;
+}
+
+.submit {
+  width: 140px;
+  height: 40px;
+  display: inline-block;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 13px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#reset {
+  background: #f8f8f8;
+  color: #999;
+  margin-right: 8px;
+}
+
+#reset:hover {
+  background: #ff6801;
+  color: #fff;
+}
+
+#submit {
+  background: #ff6801;
+  color: #fff;
+}
+
+#submit:hover {
+  background-color: #cd5300;
+}
+
+@media screen and (max-width: 992px) {
+  .cl-container {
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+
+  .signup-content {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+  }
+
+  .signup-img,
+  .signup-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register-form {
+    padding: 50px 40px 50px 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .cl-form-row {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    margin: 0px;
+  }
+
+  .cl-form-row .cl-form-group {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .radio-label {
+    padding-right: 22px;
+  }
+
+  .form-radio-item {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-radio {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+  }
+
+  .submit {
+    width: 100%;
+  }
+
+  #reset {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}

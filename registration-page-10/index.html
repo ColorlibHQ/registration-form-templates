@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V10 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register10-demo">
+    <form class="cl-register10" data-form novalidate aria-labelledby="cl-register10-title">
+      <div class="cl-register10__account">
+        <p class="cl-register10__brand">
+          <svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#065f46"/><path d="M7 19l5-6 4 3 5-7" fill="none" stroke="#fef3c7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Plotline
+        </p>
+        <h1 class="cl-register10__title" id="cl-register10-title">Start your free trial</h1>
+        <p class="cl-register10__sub">14 days of everything in your plan. Cancel any time before it ends and you pay nothing.</p>
+
+        <div class="cl-register10__grid">
+          <div class="cl-register10__field" data-field>
+            <label class="cl-register10__label" for="cl-register10-name">Full name</label>
+            <input class="cl-register10__input" id="cl-register10-name" name="name" type="text" autocomplete="name" required data-msg="Enter your full name." aria-describedby="cl-register10-name-err">
+            <p class="cl-register10__error" id="cl-register10-name-err" data-error></p>
+          </div>
+          <div class="cl-register10__field" data-field>
+            <label class="cl-register10__label" for="cl-register10-company">Company</label>
+            <input class="cl-register10__input" id="cl-register10-company" name="company" type="text" autocomplete="organization" required data-msg="Enter your company name." aria-describedby="cl-register10-company-err">
+            <p class="cl-register10__error" id="cl-register10-company-err" data-error></p>
+          </div>
+        </div>
+        <div class="cl-register10__field" data-field>
+          <label class="cl-register10__label" for="cl-register10-email">Work email</label>
+          <input class="cl-register10__input" id="cl-register10-email" name="email" type="email" autocomplete="email" required data-msg="Enter your work email." aria-describedby="cl-register10-email-err">
+          <p class="cl-register10__error" id="cl-register10-email-err" data-error></p>
+        </div>
+        <div class="cl-register10__field" data-field>
+          <label class="cl-register10__label" for="cl-register10-pw">Password</label>
+          <div class="cl-register10__pw">
+            <input class="cl-register10__input" id="cl-register10-pw" name="password" type="password" autocomplete="new-password" required minlength="10" data-msg="Create a password." aria-describedby="cl-register10-pw-hint cl-register10-pw-err">
+            <button class="cl-register10__eye" type="button" aria-label="Show password" aria-pressed="false" aria-controls="cl-register10-pw" data-pw-toggle>
+              <svg class="cl-register10__eye-on" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="cl-register10__eye-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 5.1A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6C3.9 8.3 2 12 2 12s3.6 7 10 7a9.8 9.8 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+            </button>
+          </div>
+          <p class="cl-register10__hint" id="cl-register10-pw-hint">At least 10 characters.</p>
+          <p class="cl-register10__error" id="cl-register10-pw-err" data-error></p>
+        </div>
+        <div class="cl-register10__field" data-field>
+          <label class="cl-register10__check">
+            <input type="checkbox" name="terms" required data-msg="Please accept the terms to start your trial." aria-describedby="cl-register10-terms-err">
+            <span>I agree to the <a class="cl-register10__link" href="#">Terms</a> and <a class="cl-register10__link" href="#">Data Processing Addendum</a>.</span>
+          </label>
+          <p class="cl-register10__error" id="cl-register10-terms-err" data-error></p>
+        </div>
+        <ul class="cl-register10__trust">
+          <li>No card needed for the trial</li>
+          <li>Import from spreadsheets in one click</li>
+          <li>UK and EU data hosting</li>
+        </ul>
+      </div>
+
+      <div class="cl-register10__plan" data-plan-panel>
+        <fieldset class="cl-register10__billing">
+          <legend class="cl-register10__vh">Billing period</legend>
+          <label class="cl-register10__seg"><input type="radio" name="billing" value="monthly"><span>Monthly</span></label>
+          <label class="cl-register10__seg"><input type="radio" name="billing" value="annual" checked><span>Yearly <em>save 20%</em></span></label>
+        </fieldset>
+
+        <fieldset class="cl-register10__plans">
+          <legend class="cl-register10__plans-title">Choose a plan</legend>
+          <label class="cl-register10__option">
+            <input type="radio" name="plan" value="Starter" data-monthly="9">
+            <span class="cl-register10__opt-main"><strong>Starter</strong><small>Boards, timelines and 5 GB of files</small></span>
+            <span class="cl-register10__opt-price" data-price-for="Starter"></span>
+          </label>
+          <label class="cl-register10__option">
+            <input type="radio" name="plan" value="Growth" data-monthly="24" checked>
+            <span class="cl-register10__opt-main"><strong>Growth <span class="cl-register10__pop">Most picked</span></strong><small>Workload view, guests, automations</small></span>
+            <span class="cl-register10__opt-price" data-price-for="Growth"></span>
+          </label>
+          <label class="cl-register10__option">
+            <input type="radio" name="plan" value="Scale" data-monthly="49">
+            <span class="cl-register10__opt-main"><strong>Scale</strong><small>SSO, audit log, 99.9% uptime SLA</small></span>
+            <span class="cl-register10__opt-price" data-price-for="Scale"></span>
+          </label>
+        </fieldset>
+
+        <div class="cl-register10__seats">
+          <label class="cl-register10__plans-title" for="cl-register10-seats">Seats</label>
+          <div class="cl-register10__stepper">
+            <button class="cl-register10__step" type="button" data-seat="-1" aria-label="Remove a seat">&minus;</button>
+            <input class="cl-register10__seat-input" id="cl-register10-seats" name="seats" type="number" inputmode="numeric" min="1" max="50" value="5">
+            <button class="cl-register10__step" type="button" data-seat="1" aria-label="Add a seat">+</button>
+          </div>
+        </div>
+
+        <div class="cl-register10__summary">
+          <p class="cl-register10__line" data-line></p>
+          <p class="cl-register10__total"><span data-total-label>After your trial</span><strong data-total aria-live="polite"></strong></p>
+          <p class="cl-register10__saving" data-saving></p>
+          <p class="cl-register10__trial" data-trial></p>
+        </div>
+
+        <button class="cl-register10__submit" type="submit">Start 14-day free trial</button>
+        <div class="cl-register10__live" role="status" aria-live="polite" data-live></div>
+        <p class="cl-register10__demo">Demo &mdash; nothing is sent or charged. Prices exclude VAT.</p>
+      </div>
+
+      <div class="cl-register10__done" data-success tabindex="-1" hidden>
+        <span class="cl-register10__done-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+        <h2 class="cl-register10__title" data-done-title></h2>
+        <p class="cl-register10__sub" data-done-text></p>
+      </div>
+    </form>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        
+        <div class="header">
+            <img src="images/header-text.png" alt="">
+            <img src="images/dots.png" alt="">
+        </div>
+        <div class="cl-container">
+            <form id="booking-form" class="booking-form" method="POST">
+                <div class="cl-form-group">
+                    <div class="form-destination">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="EG. HAWAII" />
+                    </div>
+                    <div class="form-date-from form-icon">
+                        <label for="date_from">From</label>
+                        <input type="text" data-date aria-label="Pick a date" id="date_from" class="date_from" placeholder="Pick a date">
+
+                    </div>
+                    <div class="form-date-to form-icon">
+                        <label for="date_to">To</label>
+                        <input type="text" data-date aria-label="Pick a date" id="date_to" class="date_to" placeholder="Pick a date">
+
+                    </div>
+                    <div class="form-quantity">
+                        <label for="quantity">Quantity</label>
+                        <span class="modify-qty plus" onClick="Tang()"><i class="zmdi zmdi-chevron-up"><svg class="cl-icon" viewBox="0 0 256 512" style="vertical-align:-0.125em" aria-hidden="true" focusable="false"><g transform="translate(0,449) scale(1,-1)"><path d="M128 277 256 149 226 119 128 217 30 119 0 149Z"/></g></svg></i></span>
+                        <input type="number" name="quantity" id="quantity" value="0" min="0" class="nput-text qty text">
+                        <span class="modify-qty minus" onClick="Giam()"><i class="zmdi zmdi-chevron-down"><svg class="cl-icon" viewBox="0 0 256 512" style="vertical-align:-0.125em" aria-hidden="true" focusable="false"><g transform="translate(0,449) scale(1,-1)"><path d="M226 265 256 235 128 107 0 235 30 265 128 167Z"/></g></svg></i></span>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" id="submit" class="submit" value="Book now" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+	<script src="js/snippet.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

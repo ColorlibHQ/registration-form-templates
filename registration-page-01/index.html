@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page V01 | Colorlib</title>
+  
+  	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="cl-register01">
+    <aside class="cl-register01__brand" aria-label="Why Tally">
+      <a class="cl-register01__logo" href="#" aria-label="Tally home">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#c6f432"/><path d="M9 10h14M16 10v13" stroke="#10131a" stroke-width="3.4" stroke-linecap="round"/></svg>
+        <span>Tally</span>
+      </a>
+      <p class="cl-register01__pitch">Get paid faster, with less admin.</p>
+      <ul class="cl-register01__perks">
+        <li>Branded invoices in under a minute</li>
+        <li>Automatic reminders for late payers</li>
+        <li>VAT and expenses ready for your accountant</li>
+      </ul>
+
+      <div class="cl-register01__mock" aria-hidden="true">
+        <div class="cl-register01__mock-top">
+          <span>Invoice #0142</span>
+          <span class="cl-register01__paid">Paid</span>
+        </div>
+        <p class="cl-register01__mock-client">Northbank Studio &middot; Brand refresh</p>
+        <p class="cl-register01__mock-amount">&pound;2,480.00</p>
+        <div class="cl-register01__mock-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="cl-register01__mock-note">Paid 3 days early &middot; 14 Sep</p>
+      </div>
+      <p class="cl-register01__trust">Trusted by 38,000 freelancers across the UK and Ireland.</p>
+    </aside>
+
+    <section class="cl-register01__main" aria-labelledby="cl-register01-title">
+      <div class="cl-register01__wrap">
+        <form class="cl-register01__form" data-form novalidate>
+          <h1 class="cl-register01__title" id="cl-register01-title">Create your account</h1>
+          <p class="cl-register01__sub">Free for your first 5 clients. No card needed.</p>
+
+          <button class="cl-register01__social" type="button" data-social>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+            Sign up with Google
+          </button>
+          <p class="cl-register01__or"><span>or with email</span></p>
+
+          <div class="cl-register01__field" data-field>
+            <label class="cl-register01__label" for="cl-register01-name">Full name</label>
+            <input class="cl-register01__input" id="cl-register01-name" name="name" type="text" autocomplete="name" required minlength="2" data-msg="Enter your full name." aria-describedby="cl-register01-name-err">
+            <p class="cl-register01__error" id="cl-register01-name-err" data-error></p>
+          </div>
+          <div class="cl-register01__field" data-field>
+            <label class="cl-register01__label" for="cl-register01-email">Email</label>
+            <input class="cl-register01__input" id="cl-register01-email" name="email" type="email" autocomplete="email" required placeholder="you@yourbusiness.com" data-msg="Enter your email address." aria-describedby="cl-register01-email-err">
+            <p class="cl-register01__error" id="cl-register01-email-err" data-error></p>
+          </div>
+          <div class="cl-register01__field" data-field data-pw-field>
+            <label class="cl-register01__label" for="cl-register01-pw">Password</label>
+            <div class="cl-register01__pw">
+              <input class="cl-register01__input" id="cl-register01-pw" name="password" type="password" autocomplete="new-password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}" data-msg="Create a password." aria-describedby="cl-register01-strength cl-register01-rules cl-register01-pw-err">
+              <button class="cl-register01__eye" type="button" aria-label="Show password" aria-pressed="false" aria-controls="cl-register01-pw" data-pw-toggle>
+                <svg class="cl-register01__eye-on" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="cl-register01__eye-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 5.1A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6C3.9 8.3 2 12 2 12s3.6 7 10 7a9.8 9.8 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+              </button>
+            </div>
+
+            <div class="cl-register01__meter" data-level="0" data-meter aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <p class="cl-register01__strength" id="cl-register01-strength" aria-live="polite" data-strength>Strength: not set</p>
+            <ul class="cl-register01__rules" id="cl-register01-rules" aria-label="Password requirements">
+              <li data-rule="length"><span class="cl-register01__tick" aria-hidden="true"></span>At least 8 characters<span class="cl-register01__vh" data-state>, not met</span></li>
+              <li data-rule="case"><span class="cl-register01__tick" aria-hidden="true"></span>Upper and lower case letters<span class="cl-register01__vh" data-state>, not met</span></li>
+              <li data-rule="number"><span class="cl-register01__tick" aria-hidden="true"></span>At least one number<span class="cl-register01__vh" data-state>, not met</span></li>
+              <li data-rule="symbol"><span class="cl-register01__tick" aria-hidden="true"></span>At least one symbol, like ! or #<span class="cl-register01__vh" data-state>, not met</span></li>
+            </ul>
+            <p class="cl-register01__error" id="cl-register01-pw-err" data-error></p>
+          </div>
+
+          <div class="cl-register01__field" data-field>
+            <label class="cl-register01__check">
+              <input type="checkbox" name="terms" required data-msg="Please accept the terms to continue." aria-describedby="cl-register01-terms-err">
+              <span>I agree to Tally&rsquo;s <a class="cl-register01__link" href="#">Terms</a> and <a class="cl-register01__link" href="#">Privacy Notice</a>.</span>
+            </label>
+            <p class="cl-register01__error" id="cl-register01-terms-err" data-error></p>
+          </div>
+
+          <button class="cl-register01__submit" type="submit">Create account</button>
+          <div class="cl-register01__live" role="status" aria-live="polite" data-live></div>
+          <p class="cl-register01__foot">Already on Tally? <a class="cl-register01__link" href="#">Log in</a></p>
+          <p class="cl-register01__demo">Demo &mdash; nothing is sent.</p>
+        </form>
+
+        <div class="cl-register01__done" data-success tabindex="-1" hidden>
+          <span class="cl-register01__done-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+          <h2 class="cl-register01__title" data-done-title>Account created</h2>
+          <p class="cl-register01__sub" data-done-text></p>
+          <ol class="cl-register01__next">
+            <li>Confirm your email</li>
+            <li>Add your business details and logo</li>
+            <li>Send your first invoice</li>
+          </ol>
+          <p class="cl-register01__demo">Demo &mdash; nothing was sent.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+	<script src="js/snippet.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+/* colorlib-regform-9 - Colorlib
+ * Every style this snippet uses, and nothing else. No framework, no build step.
+ */
+
+/* Keeps a host page's framework base styles (Bootstrap's reboot) off this
+   snippet: every element starts from the browser default, then this sheet
+   styles it. On its own page it changes nothing. */
+:where(html) :is(html,body,div,span,p,a,h1,h2,h3,h4,h5,h6,label,input,select,option,optgroup,textarea,button,form,fieldset,legend,ul,ol,li,dl,dt,dd,figure,figcaption,section,article,header,footer,nav,main,aside,strong,b,em,i,small,sub,sup,blockquote,pre,code,picture,progress,output,summary,details,address,abbr,mark), :is(html, body) {
+  all: revert;
+}
+:where(html) input::-webkit-datetime-edit,
+:where(html) input::-webkit-datetime-edit-fields-wrapper,
+:where(html) input::-webkit-datetime-edit-text,
+:where(html) input::-webkit-datetime-edit-month-field,
+:where(html) input::-webkit-datetime-edit-day-field,
+:where(html) input::-webkit-datetime-edit-year-field {
+  all: revert;
+}
+:where(html) :is(img, svg) {
+  vertical-align: revert;
+}
+:where(html) :is(img, table, thead, tbody, tfoot, tr, th, td, caption, hr, iframe, video) {
+  box-sizing: revert;
+}
+:where(html) img {
+  border-style: revert;
+}
+:where(html) table {
+  border-collapse: revert;
+  caption-side: revert;
+}
+:where(html) caption {
+  padding-top: revert;
+  padding-bottom: revert;
+  color: revert;
+  text-align: revert;
+}
+:where(html) th {
+  text-align: revert;
+}
+:where(html) :is(thead, tbody, tfoot, tr, td, th) {
+  border-color: revert;
+  border-style: revert;
+  border-width: revert;
+}
+:where(html) hr {
+  margin: revert;
+  color: revert;
+  background-color: revert;
+  border: revert;
+  opacity: revert;
+  height: revert;
+  overflow: revert;
+}
+
+.zmdi {
+  display: inline-block;
+  line-height: 1;
+  font-size: inherit;
+  font-style: normal;
+}
+
+.cl-icon {
+  height: 1em;
+  width: auto;
+  fill: currentColor;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+
+  src: url('../fonts/poppins-v5-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+
+  src: url('../fonts/poppins-v5-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+
+  src: url('../fonts/poppins-v5-latin-700.woff2') format('woff2');
+}
+
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+  transition: all 300ms ease 0s;
+  -moz-transition: all 300ms ease 0s;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  -ms-transition: all 300ms ease 0s;
+}
+
+input {
+  outline: none;
+  appearance: unset !important;
+  -moz-appearance: unset !important;
+  -webkit-appearance: unset !important;
+  -o-appearance: unset !important;
+  -ms-appearance: unset !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+}
+
+input[type=checkbox] {
+  appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  -webkit-appearance: checkbox !important;
+  -o-appearance: checkbox !important;
+  -ms-appearance: checkbox !important;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 30px transparent inset;
+  -moz-box-shadow: 0 0 0 30px transparent inset;
+  -webkit-box-shadow: 0 0 0 30px transparent inset;
+  -o-box-shadow: 0 0 0 30px transparent inset;
+  -ms-box-shadow: 0 0 0 30px transparent inset;
+  background-color: transparent !important;
+}
+
+p {
+  margin-bottom: 32px;
+  margin-top: 0px;
+  font-weight: 400;
+}
+
+p span {
+  font-weight: bold;
+}
+
+h2 {
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Poppins';
+  margin: 0px;
+  background-image: url('../images/body-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-position: center center;
+}
+
+.main {
+  position: relative;
+}
+
+.cl-container {
+  margin-top: 120px;
+  margin-bottom: 70px;
+  width: 1123px;
+  padding-top: 135px;
+  padding-bottom: 115px;
+  background-image: url('../images/container-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.signup-content {
+  width: 562px;
+  margin-right: 0px;
+  background: rgba(177, 135, 77, 0.75);
+  float: right;
+}
+
+.signup-form {
+  padding: 54px 80px 36px 55px;
+}
+
+.cl-form-group {
+  margin-bottom: 23px;
+}
+
+input {
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebebeb;
+  background: transparent;
+  width: 100%;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Poppins';
+  font-size: 14px;
+  padding: 3px 0;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #fff;
+}
+
+input::-moz-placeholder {
+  font-weight: 400;
+  color: #fff;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 400;
+  color: #fff;
+}
+
+input:-moz-placeholder {
+  font-weight: 400;
+  color: #fff;
+}
+
+input:focus {
+  font-weight: bold;
+}
+
+.field-icon {
+  float: right;
+  margin-right: 0px;
+  margin-top: -22px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+input[type=checkbox]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  display: none;
+}
+
+input[type=checkbox]:not(old) + label {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+input[type=checkbox]:not(old) + label > span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 15px;
+  margin-bottom: 4px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  background: transparent;
+  vertical-align: bottom;
+}
+
+input[type=checkbox]:not(old):checked + label > span {
+  background: transparent;
+}
+
+input[type=checkbox]:not(old):checked + label > span:before {
+  content: '\f26b';
+  display: block;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  font-family: 'Material-Design-Iconic-Font';
+  font-weight: bold;
+}
+
+.label-agree-term {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.term-service {
+  color: #fff;
+}
+
+.form-submit {
+  width: auto;
+  display: inline-block;
+  border: none;
+  background: #fff;
+  color: #b18757;
+  padding: 10px;
+  height: 50px;
+  box-shadow: 0px 15px 9.9px 0.1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 15px 9.9px 0.1px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 15px 9.9px 0.1px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0px 15px 9.9px 0.1px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0px 15px 9.9px 0.1px rgba(0, 0, 0, 0.15);
+  margin-right: 25px;
+}
+
+.form-submit:hover {
+  background-color: #e6e6e6;
+}
+
+.submit {
+  width: 130px;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -o-border-radius: 25px;
+  -ms-border-radius: 25px;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.submit-link {
+  border: 2px solid #fff;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.submit-link:hover {
+  background: #fff;
+  color: #b18757;
+}
+
+@media screen and (max-width: 992px) {
+  .cl-container {
+    width: calc( 100% - 30px);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .signup-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .submit {
+    width: 100%;
+  }
+
+  .form-submit {
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+
+  .signup-form {
+    padding: 54px 30px 36px 30px;
+  }
+}
+
+@font-face { font-family: 'Material-Design-Iconic-Font'; src: url('../fonts/Material-Design-Iconic-Font-subset.woff2') format('woff2'); font-display: block; }
+
+/* Swappable icons: both glyphs ship, the element's class picks one. */
+.cl-icon[data-icon] {
+  display: none;
+}
+.zmdi-eye > .cl-icon[data-icon="zmdi-eye"],
+.zmdi-eye-off > .cl-icon[data-icon="zmdi-eye-off"] {
+  display: inline-block;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="cl-container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/form-img.jpg" alt="">
+                    <div class="signup-img-content">
+                        <h2>Register now </h2>
+                        <p>while seats are available !</p>
+                    </div>
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="cl-form-row">
+                            <div class="cl-form-group">
+                                <div class="form-input">
+                                    <label for="first_name" class="required">First name</label>
+                                    <input type="text" name="first_name" id="first_name" required>
+                                </div>
+                                <div class="form-input">
+                                    <label for="last_name" class="required">Last name</label>
+                                    <input type="text" name="last_name" id="last_name" required>
+                                </div>
+                                <div class="form-input">
+                                    <label for="company" class="required">Company</label>
+                                    <input type="text" name="company" id="company" required>
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="email" name="email" id="email" required>
+                                </div>
+                                <div class="form-input">
+                                    <label for="phone_number" class="required">Phone number</label>
+                                    <input type="text" name="phone_number" id="phone_number" required>
+                                </div>
+                            </div>
+                            <div class="cl-form-group">
+                                <div class="cl-form-select">
+                                    <div class="label-flex">
+                                        <label for="meal_preference">meal preference</label>
+                                        <a href="#" class="form-link">Lunch detail</a>
+                                    </div>
+                                    <div class="select-list">
+                                        <ul class="cl-select-shell cl-select-full list-item"><li class="init"><select name="meal_preference" id="meal_preference" class="cl-select cl-sel-0">
+                                            <option value="Vegetarian">Vegetarian</option>
+                                            <option value="Kosher">Kosher</option>
+                                            <option value="Asian Vegetarian">Asian Vegetarian</option>
+                                        </select></li></ul>
+                                    </div>
+                                </div>
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="payment">Payment Mode</label>
+                                        <a href="#" class="form-link">Payment Detail</a>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cash" checked>
+                                            <label for="cash">Cash</label>
+                                            <span class="cl-check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cheque">
+                                            <label for="cheque">Cheque</label>
+                                            <span class="cl-check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="demand">
+                                            <label for="demand">Demand Draf</label>
+                                            <span class="cl-check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="chequeno">DD / Cheque No.</label>
+                                    <input type="text" name="chequeno" id="chequeno" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="blank_name">Drawn on ( Bank Name)</label>
+                                    <input type="text" name="blank_name" id="blank_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="payable">Payable at</label>
+                                    <input type="text" name="payable" id="payable" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="donate-us">
+                            <label>Donate us</label>
+                            <div class="price_slider ui-slider ui-slider-horizontal">
+                                <div id="slider-margin"></div>
+                                <span class="donate-value" id="value-lower"></span>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                            <input type="reset" value="Reset" class="submit" id="reset" name="reset" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+	<script src="js/snippet.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
